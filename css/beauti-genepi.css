@@ -1,0 +1,184 @@
+/* BEAUti|GenEpi application styles (on top of Bootstrap 5). */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Branding ─────────────────────────────────────────────────────────── */
+
+.app-brand {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brand-separator {
+  margin: 0 0.15em;
+  color: var(--bs-secondary-color);
+  font-weight: 300;
+}
+
+.brand-genepi {
+  color: var(--bs-primary);
+}
+
+/* ── Layout ───────────────────────────────────────────────────────────── */
+
+.app-body {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+.app-sidebar {
+  width: 16rem;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+}
+
+.app-content > div {
+  max-width: 64rem;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+}
+
+@media (max-width: 767.98px) {
+  .app-body {
+    flex-direction: column;
+  }
+  .app-sidebar {
+    width: auto;
+    max-height: 30vh;
+    border-right: 0 !important;
+    border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+  }
+  .app-content,
+  .app-footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* ── Step list ────────────────────────────────────────────────────────── */
+
+.step-list {
+  --bs-list-group-bg: transparent;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+}
+
+.step-item.active {
+  border-left-color: var(--bs-primary);
+}
+
+.step-number {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  background: var(--bs-secondary-bg);
+  color: var(--bs-body-color);
+}
+
+.step-item.active .step-number {
+  background: var(--bs-white);
+  color: var(--bs-primary);
+}
+
+.step-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.step-item.active .step-status {
+  color: inherit !important;
+}
+
+/* ── Step content ─────────────────────────────────────────────────────── */
+
+.step-heading {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.template-controls {
+  max-width: 32rem;
+}
+
+.template-card.active {
+  border-width: 2px;
+}
+
+.template-url-form {
+  max-width: 32rem;
+  flex: 1 1 20rem;
+}
+
+.drop-zone {
+  border: 2px dashed var(--bs-border-color);
+  border-radius: var(--bs-border-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  color: var(--bs-secondary-color);
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.drop-zone.drag-over {
+  border-color: var(--bs-primary);
+  background: var(--bs-primary-bg-subtle);
+}
+
+.taxa-table {
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+.taxa-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--bs-body-bg);
+}
+
+.xml-preview {
+  max-height: 60vh;
+  overflow: auto;
+  font-size: 0.8rem;
+  background: var(--bs-tertiary-bg);
+  white-space: pre;
+}

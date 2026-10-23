@@ -1,0 +1,12 @@
+{
+  "name": "beauti-genepi",
+  "version": "0.1.0",
+  "description": "BEAUti|GenEpi \u2014 build BEAST analyses for viral genomic epidemiology",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes http-server -c-1 -p 8080 .",
+    "test": "node --test \"tests/**/*.test.js\""
+  },
+  "license": "MIT"
+}

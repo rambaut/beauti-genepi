@@ -1,0 +1,9 @@
+{
+  "templates": [
+    {
+      "file": "basic-dated-phylogeny.xml",
+      "name": "Basic dated phylogeny",
+      "description": "HKY (+Γ) substitution model, strict or relaxed clock, constant-size coalescent. A starting point for time-scaled viral phylogenies."
+    }
+  ]
+}

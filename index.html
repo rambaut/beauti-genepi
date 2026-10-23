@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+  BEAUti|GenEpi — build BEAST analyses for viral genomic epidemiology.
+  License: MIT
+-->
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEAUti|GenEpi</title>
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/beauti-genepi.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand bg-body-tertiary border-bottom app-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand app-brand" href="./">
+      <span class="brand-beauti">BEAUti</span><span class="brand-separator">|</span><span class="brand-genepi">GenEpi</span>
+    </a>
+    <span class="navbar-text small text-body-secondary text-truncate d-none d-md-inline" id="template-name-label"></span>
+    <div class="ms-auto d-flex gap-1">
+      <button class="btn btn-sm btn-outline-secondary" id="new-analysis" title="New analysis">
+        <i class="bi bi-file-earmark-plus"></i><span class="d-none d-lg-inline ms-1">New</span>
+      </button>
+      <button class="btn btn-sm btn-outline-secondary" id="open-analysis" title="Open analysis">
+        <i class="bi bi-folder2-open"></i><span class="d-none d-lg-inline ms-1">Open</span>
+      </button>
+      <button class="btn btn-sm btn-outline-secondary" id="save-analysis" title="Save analysis">
+        <i class="bi bi-save"></i><span class="d-none d-lg-inline ms-1">Save</span>
+      </button>
+      <button class="btn btn-sm btn-primary" id="generate-xml" title="Generate BEAST XML">
+        <i class="bi bi-filetype-xml"></i><span class="d-none d-lg-inline ms-1">Generate XML</span>
+      </button>
+      <button class="btn btn-sm btn-outline-secondary" id="toggle-theme" title="Toggle light/dark theme">
+        <i class="bi bi-moon-stars"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="app-body">
+  <aside class="app-sidebar border-end bg-body-tertiary">
+    <ol class="list-group list-group-flush step-list" id="step-list"></ol>
+  </aside>
+  <main class="app-main">
+    <div class="app-content" id="step-content"></div>
+    <footer class="app-footer border-top bg-body">
+      <button class="btn btn-outline-secondary" id="step-back"><i class="bi bi-chevron-left me-1"></i>Back</button>
+      <span class="small text-body-secondary" id="step-position"></span>
+      <button class="btn btn-primary" id="step-next">Next<i class="bi bi-chevron-right ms-1"></i></button>
+    </footer>
+  </main>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3" id="toast-container"></div>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
